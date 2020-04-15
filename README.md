@@ -1,1 +1,1 @@
-A repository for learning Golang.
+使用go get获取远程包的例子.
