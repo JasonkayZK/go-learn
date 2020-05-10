@@ -1,1 +1,1 @@
-A repository for learning Golang.
+A repository for go-mod demo.
