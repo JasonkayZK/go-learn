@@ -1,1 +1,1 @@
-A repository for learning Golang.
+A branch for showing how gRPC framework works with mysql. 
