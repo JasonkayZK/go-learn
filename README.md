@@ -1,1 +1,1 @@
-A repository for learning Golang.
+A branch for showing how init() method do in go package.
