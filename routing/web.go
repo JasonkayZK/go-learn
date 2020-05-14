@@ -49,7 +49,7 @@ func (w *WebService) routing(db *xorm.Engine) {
 	v1.POST("/", petController.Create)
 	v1.GET("/:id", petController.Show)
 	v1.PUT("/:id", petController.Update)
-	v1.PUT("/:id/upload", petController.UploadImage)
+	v1.DELETE("/:id", petController.DeleteById)
 
 	err := r.Run()
 	if err != nil {
