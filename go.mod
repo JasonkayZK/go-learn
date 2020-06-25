@@ -1,3 +1,3 @@
-module hello-go
+module prime
 
 go 1.14
