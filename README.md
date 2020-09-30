@@ -1,11 +1,7 @@
 A repository for learning Golang.
 
-### Structure
+## 进度条使用
 
-Master branch shows a really simple project structure for a go-modules-based application.
+详细内容见：
 
-A google-standard project structure goes to: [golang-project-layout](https://github.com/JasonkayZK/Go_Learn/tree/golang-project-layout) 
-
-### Others
-
-Some other branches in this repo shows some golang attributes :)
+-  [Golang中的进度条使用](https://jasonkayzk.github.io/2020/09/29/Golang中的进度条使用/)
