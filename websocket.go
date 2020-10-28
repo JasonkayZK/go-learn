@@ -32,11 +32,11 @@ func wsEndpoint(w http.ResponseWriter, r *http.Request) {
 	// handle writer
 	go func() {
 		for {
+			time.Sleep(time.Second * 5)
 			err = ws.WriteMessage(1, []byte(time.Now().Format("2006-01-02 15:04:05")))
 			if err != nil {
 				log.Println(err)
 			}
-			time.Sleep(time.Second)
 		}
 	}()
 
