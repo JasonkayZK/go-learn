@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SSE test</title>
+    <script type="text/javascript">
+        window.addEventListener("DOMContentLoaded", function () {
+            var evsrc = new EventSource("/events");
+            evsrc.onmessage = function (ev) {
+                document.getElementById("log")
+                    .insertAdjacentHTML("beforeend", "<li>" + ev.data + "</li>");
+            }
+            evsrc.onerror = function (ev) {
+                console.log("readyState = " + ev.currentTarget.readyState);
+            }
+        })
+    </script>
+</head>
+<body>
+<h1>SSE test</h1>
+<div>
+    <ul id="log">
+    </ul>
+</div>
+</body>
+</html>
