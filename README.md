@@ -18,7 +18,9 @@ go mod tidy
 go run app.go
 ```
 
-访问http://localhost:8080/，可以看到页面收到服务器主动推送时间：
+访问：[http://localhost:8080/](http://localhost:8080/)
+
+可以看到页面收到服务器主动推送时间：
 
 ![demo1.png](./images/demo1.png)
 
