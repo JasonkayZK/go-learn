@@ -24,4 +24,5 @@
 | [id-validator-demo](https://github.com/JasonkayZK/Go_Learn/tree/id-validator-demo) | 2021-02-14   | Go的中国身份证号校验库[guanguans/id-validator](https://github.com/guanguans/id-validator)示例代码<br />文章[《Go的中国身份证号校验库》](https://jasonkayzk.github.io/2021/02/14/Go的中国身份证号校验库/)源码 |
 | [go-mysql-server-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-mysql-server-demo) | 2021-02-15   | [go-mysql-server](https://github.com/dolthub/go-mysql-server)使用案例<br />文章[《使用纯Go实现的MySQL数据库》](https://jasonkayzk.github.io/2021/02/14/使用纯Go实现的MySQL数据库/)源码 |
 | [sse](https://github.com/JasonkayZK/Go_Learn/tree/sse)       | 2021-03-05   | Go中使用SSE(服务端事件推送)例子<br />文章[《使用Go实现服务端事件推送SSE》](https://jasonkayzk.github.io/2021/03/05/使用Go实现服务端事件推送SSE/)源码 |
+| [goleak-demo](https://github.com/JasonkayZK/Go_Learn/tree/goleak-demo) | 2021-04-21   | Go中使用[uber-go/goleak](https://github.com/uber-go/goleak)进行Goroutine泄露检测的例子；<br />文章[《使用Uber开源的goleak库进行goroutine泄露检测》](https://jasonkayzk.github.io/2021/04/21/使用Uber开源的goleak库进行goroutine泄露检测/)源码 |
 
