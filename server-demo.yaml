@@ -1,0 +1,9 @@
+kind: HTTPServer
+name: server-demo
+port: 10080
+keepAlive: true
+https: false
+rules:
+  - paths:
+      - pathPrefix: /pipeline
+        backend: pipeline-demo

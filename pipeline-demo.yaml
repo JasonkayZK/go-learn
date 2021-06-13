@@ -1,0 +1,28 @@
+name: pipeline-demo
+kind: HTTPPipeline
+flow:
+  - filter: validator
+    jumpIf: { invalid: END }
+  - filter: requestAdaptor
+  - filter: proxy
+filters:
+  - name: validator
+    kind: Validator
+    headers:
+      Content-Type:
+        values:
+          - application/json
+  - name: requestAdaptor
+    kind: RequestAdaptor
+    header:
+      set:
+        X-Adapt-Key: goodplan
+  - name: proxy
+    kind: Proxy
+    mainPool:
+      servers:
+        - url: http://127.0.0.1:9095
+        - url: http://127.0.0.1:9096
+        - url: http://127.0.0.1:9097
+      loadBalance:
+        policy: roundRobin

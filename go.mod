@@ -1,3 +1,3 @@
-module hello-go
+module easegress-demo
 
 go 1.14
