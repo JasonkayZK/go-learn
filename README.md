@@ -27,5 +27,6 @@
 | [goleak-demo](https://github.com/JasonkayZK/Go_Learn/tree/goleak-demo) | 2021-04-21   | Go中使用[uber-go/goleak](https://github.com/uber-go/goleak)进行Goroutine泄露检测的例子；<br />文章[《使用Uber开源的goleak库进行goroutine泄露检测》](https://jasonkayzk.github.io/2021/04/21/使用Uber开源的goleak库进行goroutine泄露检测/)源码 |
 | [go-elk-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-elk-demo) | 2021-05-16   | Go中集成ELK的例子；<br />文章[《在Go中集成ELK服务》](https://jasonkayzk.github.io/2021/05/16/在Go中集成ELK服务/)源码 |
 | [easegress-demo](https://github.com/JasonkayZK/Go_Learn/tree/easegress-demo) | 2021-06-13   | 一个展示流量编排系统[easegress](https://github.com/megaease/easegress)基本使用的例子；<br />文章[《流量编排系统Easegress初探》](https://jasonkayzk.github.io/2021/06/13/流量编排系统Easegress初探/)源码 |
+| [distributed-id-generator-mysql](https://github.com/JasonkayZK/Go_Learn/tree/distributed-id-generator-mysql) | 2021-06-20   | 一个仅使用MySQL实现高性能分布式ID生成器的例子；<br />文章[《在Go中仅使用MySQL实现高性能分布式ID生成器》](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)源码 |
 |                                                              |              |                                                              |
 
