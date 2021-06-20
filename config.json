@@ -1,0 +1,8 @@
+{
+  "DSN": "root:123456@tcp(127.0.0.1:3306)/id_alloc_db",
+  "table": "segments",
+
+  "HttpPort": 8880,
+  "HttpReadTimeout": 5000,
+  "HttpWriteTimeout": 5000
+}
