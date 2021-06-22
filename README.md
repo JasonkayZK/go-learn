@@ -125,8 +125,17 @@ mysql> select * from id_alloc_db.segments;
 
 ## **相关博文**
 
--   Github Pages：[在Go中仅使用MySQL实现高性能分布式ID生成器](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)
--   国内Gitee镜像：[在Go中仅使用MySQL实现高性能分布式ID生成器](https://jasonkay.gitee.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)
+Github Pages：
+
+-   [UUID生成算法-UUID还是snowflake](https://jasonkayzk.github.io/2020/02/09/UUID生成算法-UUID还是snowflake/)
+-   [高性能分布式ID生成器实现方法总结](https://jasonkayzk.github.io/2021/06/20/高性能分布式ID生成器实现方法总结/)
+-   [在Go中仅使用MySQL实现高性能分布式ID生成器](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)
+
+国内Gitee镜像：
+
+-   [UUID生成算法-UUID还是snowflake](https://jasonkay.gitee.io/2020/02/09/UUID生成算法-UUID还是snowflake/)
+-   [高性能分布式ID生成器实现方法总结](https://jasonkay.gitee.io/2021/06/20/高性能分布式ID生成器实现方法总结/)
+-   [在Go中仅使用MySQL实现高性能分布式ID生成器](https://jasonkay.gitee.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)
 
 <br/>
 
