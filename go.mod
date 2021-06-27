@@ -1,3 +1,3 @@
-module hello-go
+module map-reduce
 
 go 1.14
