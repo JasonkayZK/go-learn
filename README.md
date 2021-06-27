@@ -28,5 +28,7 @@
 | [go-elk-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-elk-demo) | 2021-05-16   | Go中集成ELK的例子；<br />文章[《在Go中集成ELK服务》](https://jasonkayzk.github.io/2021/05/16/在Go中集成ELK服务/)源码 |
 | [easegress-demo](https://github.com/JasonkayZK/Go_Learn/tree/easegress-demo) | 2021-06-13   | 一个展示流量编排系统[easegress](https://github.com/megaease/easegress)基本使用的例子；<br />文章[《流量编排系统Easegress初探》](https://jasonkayzk.github.io/2021/06/13/流量编排系统Easegress初探/)源码 |
 | [distributed-id-generator-mysql](https://github.com/JasonkayZK/Go_Learn/tree/distributed-id-generator-mysql) | 2021-06-20   | 一个仅使用MySQL实现高性能分布式ID生成器的例子；<br />文章[《在Go中仅使用MySQL实现高性能分布式ID生成器》](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)源码 |
+| [map-reduce](https://github.com/JasonkayZK/Go_Learn/tree/map-reduce) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
+| [raft](https://github.com/JasonkayZK/Go_Learn/tree/raft) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
 |                                                              |              |                                                              |
 
