@@ -1,3 +1,3 @@
-module hello-go
+module receiver
 
 go 1.14
