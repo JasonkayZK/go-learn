@@ -1,3 +1,3 @@
-module hello-go
+module raft
 
 go 1.14
