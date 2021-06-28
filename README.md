@@ -30,5 +30,6 @@
 | [distributed-id-generator-mysql](https://github.com/JasonkayZK/Go_Learn/tree/distributed-id-generator-mysql) | 2021-06-20   | 一个仅使用MySQL实现高性能分布式ID生成器的例子；<br />文章[《在Go中仅使用MySQL实现高性能分布式ID生成器》](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)源码 |
 | [map-reduce](https://github.com/JasonkayZK/Go_Learn/tree/map-reduce) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
 | [raft](https://github.com/JasonkayZK/Go_Learn/tree/raft) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
+| [receiver](https://github.com/JasonkayZK/Go_Learn/tree/receiver) | 2021-06-28   | 深入探讨了Go中方法实现的值接收器和引用接收器以及他们和Interface的联系；<br />文章[《一文看懂Go方法中的值接收器和引用接收器》](https://jasonkayzk.github.io/2021/06/28/一文看懂Go方法中的值接收器和引用接收器/)源码 |
 |                                                              |              |                                                              |
 
