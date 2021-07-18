@@ -25,4 +25,6 @@ func stringify[T MyStringer](s []T) (ret []string) {
 
 func main() {
 	fmt.Println(stringify([]StringInt{1, 2, 3, 4, 5}))
+
+	//fmt.Println(stringify([]int{1, 2, 3, 4, 5}))
 }
