@@ -31,5 +31,6 @@
 | [map-reduce](https://github.com/JasonkayZK/Go_Learn/tree/map-reduce) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
 | [raft](https://github.com/JasonkayZK/Go_Learn/tree/raft) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
 | [receiver](https://github.com/JasonkayZK/Go_Learn/tree/receiver) | 2021-06-28   | 深入探讨了Go中方法实现的值接收器和引用接收器以及他们和Interface的联系；<br />文章[《一文看懂Go方法中的值接收器和引用接收器》](https://jasonkayzk.github.io/2021/06/28/一文看懂Go方法中的值接收器和引用接收器/)源码 |
+| [go-v1.17-rc-generic](https://github.com/JasonkayZK/Go_Learn/tree/go-v1.17-rc-generic) | 2021-07-19   | 在Docker中体验Golang的泛型<br />文章[《在Docker中体验Go1-17中的泛型》](https://jasonkayzk.github.io/2021/07/05/在Docker中体验Go1-17中的泛型/)源码 |
 |                                                              |              |                                                              |
 
