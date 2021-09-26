@@ -1,36 +1,140 @@
-## Go Learn
+# **在Golang发生Panic后打印出堆栈信息**
 
-一个学习Go的仓库；
+对于实际的项目来说，框架都会提供`recover`来做业务发生`panic`时的拦截，保证整个服务不会因为一个业务的`panic`而导致整个服务直接挂掉；
 
-### 说明
+同时，通常情况下框架都会记录并打出`panic`的堆栈信息，但是在框架之外，我们该怎么打印出来堆栈信息呢？
 
-| **项目名称**                                                 | **更新日期** | **说明**                                                     |
-| ------------------------------------------------------------ | ------------ | ------------------------------------------------------------ |
-| [context](https://github.com/JasonkayZK/Go_Learn/tree/context) | 2021-01-22   | Go Context并发编程                                           |
-| [go-get](https://github.com/JasonkayZK/Go_Learn/tree/go-get) | 2021-01-22   | 使用go-get获取远程包的例子                                   |
-| [go-init-map](https://github.com/JasonkayZK/Go_Learn/tree/go-init-map) | 2021-01-22   | 展示init()函数在Go中的特性                                   |
-| [go-mod-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-mod-demo) | 2021-01-22   | 一个go-mod的例子                                             |
-| [go-restful-xorm](https://github.com/JasonkayZK/Go_Learn/tree/go-restful-xorm) | 2021-01-22   | 使用[Gin-Gonic](https://github.com/gin-gonic/gin)、[XORM](https://github.com/go-xorm/xorm)和MySQL构建RESTful API例子 |
-| [golang-project-layout](https://github.com/JasonkayZK/Go_Learn/tree/golang-project-layout) | 2021-01-22   | Google官方的Go项目标准模板                                   |
-| [graphql](https://github.com/JasonkayZK/Go_Learn/tree/graphql) | 2021-01-22   | 使用Go + MySQL构建的GraphQL API                              |
-| [grpc-demo](https://github.com/JasonkayZK/Go_Learn/tree/grpc-demo) | 2021-01-22   | 一个gRPC例子                                                 |
-| [grpc-sql-demo](https://github.com/JasonkayZK/Go_Learn/tree/grpc-sql-demo) | 2021-01-22   | 一个gRPC和MySQL结合的例子                                    |
-| [nil](https://github.com/JasonkayZK/Go_Learn/tree/nil)       | 2021-01-22   | 谈谈Go中的Nil，文章[《在Golang中使用nil调用方法》](https://jasonkayzk.github.io/2020/09/23/%E5%9C%A8Golang%E4%B8%AD%E4%BD%BF%E7%94%A8nil%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95/)源码 |
-| [prime](https://github.com/JasonkayZK/Go_Learn/tree/prime)   | 2021-01-22   | 文章[《Golang并发素数筛-并发真的会快吗？》](https://jasonkayzk.github.io/2020/06/25/golang%E5%B9%B6%E5%8F%91%E7%B4%A0%E6%95%B0%E7%AD%9B-%E5%B9%B6%E5%8F%91%E7%9C%9F%E7%9A%84%E4%BC%9A%E5%BF%AB%E5%90%97%EF%BC%9F/)源码 |
-| [progress-bar](https://github.com/JasonkayZK/Go_Learn/tree/progress-bar) | 2021-01-22   | 文章[《Golang中的进度条使用》](https://jasonkayzk.github.io/2020/09/29/Golang中的进度条使用/)源码 |
-| [protobuf_grpc_demo](https://github.com/JasonkayZK/Go_Learn/tree/protobuf_grpc_demo) | 2021-01-22   | Protobuf + gRPC使用例子                                      |
-| [slice](https://github.com/JasonkayZK/Go_Learn/tree/slice)   | 2021-01-22   | 文章[《Golang中Slice底层实现》](https://jasonkayzk.github.io/2020/10/04/%E3%80%90%E8%BD%AC%E3%80%91Golang%E4%B8%ADSlice%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0/)源码 |
-| [websocket](https://github.com/JasonkayZK/Go_Learn/tree/websocket) | 2021-01-22   | Go中使用WebSocket例子<br />文章[《使用golang构建简单的websocket应用》](https://jasonkayzk.github.io/2020/10/28/使用golang构建简单的websocket应用/)源码 |
-| [id-validator-demo](https://github.com/JasonkayZK/Go_Learn/tree/id-validator-demo) | 2021-02-14   | Go的中国身份证号校验库[guanguans/id-validator](https://github.com/guanguans/id-validator)示例代码<br />文章[《Go的中国身份证号校验库》](https://jasonkayzk.github.io/2021/02/14/Go的中国身份证号校验库/)源码 |
-| [go-mysql-server-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-mysql-server-demo) | 2021-02-15   | [go-mysql-server](https://github.com/dolthub/go-mysql-server)使用案例<br />文章[《使用纯Go实现的MySQL数据库》](https://jasonkayzk.github.io/2021/02/14/使用纯Go实现的MySQL数据库/)源码 |
-| [sse](https://github.com/JasonkayZK/Go_Learn/tree/sse)       | 2021-03-05   | Go中使用SSE(服务端事件推送)例子<br />文章[《使用Go实现服务端事件推送SSE》](https://jasonkayzk.github.io/2021/03/05/使用Go实现服务端事件推送SSE/)源码 |
-| [goleak-demo](https://github.com/JasonkayZK/Go_Learn/tree/goleak-demo) | 2021-04-21   | Go中使用[uber-go/goleak](https://github.com/uber-go/goleak)进行Goroutine泄露检测的例子；<br />文章[《使用Uber开源的goleak库进行goroutine泄露检测》](https://jasonkayzk.github.io/2021/04/21/使用Uber开源的goleak库进行goroutine泄露检测/)源码 |
-| [go-elk-demo](https://github.com/JasonkayZK/Go_Learn/tree/go-elk-demo) | 2021-05-16   | Go中集成ELK的例子；<br />文章[《在Go中集成ELK服务》](https://jasonkayzk.github.io/2021/05/16/在Go中集成ELK服务/)源码 |
-| [easegress-demo](https://github.com/JasonkayZK/Go_Learn/tree/easegress-demo) | 2021-06-13   | 一个展示流量编排系统[easegress](https://github.com/megaease/easegress)基本使用的例子；<br />文章[《流量编排系统Easegress初探》](https://jasonkayzk.github.io/2021/06/13/流量编排系统Easegress初探/)源码 |
-| [distributed-id-generator-mysql](https://github.com/JasonkayZK/Go_Learn/tree/distributed-id-generator-mysql) | 2021-06-20   | 一个仅使用MySQL实现高性能分布式ID生成器的例子；<br />文章[《在Go中仅使用MySQL实现高性能分布式ID生成器》](https://jasonkayzk.github.io/2021/06/20/在Go中仅使用MySQL实现高性能分布式ID生成器/)源码 |
-| [map-reduce](https://github.com/JasonkayZK/Go_Learn/tree/map-reduce) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
-| [raft](https://github.com/JasonkayZK/Go_Learn/tree/raft) <br />**Not Finihed Yet！** | 2021-06-27   |                                                              |
-| [receiver](https://github.com/JasonkayZK/Go_Learn/tree/receiver) | 2021-06-28   | 深入探讨了Go中方法实现的值接收器和引用接收器以及他们和Interface的联系；<br />文章[《一文看懂Go方法中的值接收器和引用接收器》](https://jasonkayzk.github.io/2021/06/28/一文看懂Go方法中的值接收器和引用接收器/)源码 |
-| [go-v1.17-rc-generic](https://github.com/JasonkayZK/Go_Learn/tree/go-v1.17-rc-generic) | 2021-07-19   | 在Docker中体验Golang的泛型<br />文章[《在Docker中体验Go1-17中的泛型》](https://jasonkayzk.github.io/2021/07/05/在Docker中体验Go1-17中的泛型/)源码 |
-|                                                              |              |                                                              |
+其实很简单通过`runtime.Stack`函数即可！
 
+下面的三行代码就能返回当前Goroutine的堆栈信息：
+
+```go
+// getCurrentGoroutineStack 获取当前Goroutine的调用栈，便于排查panic异常
+func getCurrentGoroutineStack() string {
+	var buf [defaultStackSize]byte
+	n := runtime.Stack(buf[:], false)
+	return string(buf[:n])
+}
+```
+
+下面看一个实际项目抽象出的例子：
+
+```go
+package main
+
+import (
+	"fmt"
+	"runtime"
+	"sync"
+)
+
+const (
+	defaultStackSize = 4096
+)
+
+func callPanic() {
+	panic("test panic")
+}
+
+// getCurrentGoroutineStack 获取当前Goroutine的调用栈，便于排查panic异常
+func getCurrentGoroutineStack() string {
+	var buf [defaultStackSize]byte
+	n := runtime.Stack(buf[:], false)
+	return string(buf[:n])
+}
+
+func task(arr *[]int, i int, wg *sync.WaitGroup, lock *sync.Mutex) {
+	defer func() {
+		if err := recover(); err != nil {
+			fmt.Printf("[panic] err: %v\nstack: %s\n", err, getCurrentGoroutineStack())
+		}
+		wg.Done()
+	}()
+
+	if i == 500 {
+		callPanic()
+	}
+
+	lock.Lock()
+	defer lock.Unlock()
+	*arr = append(*arr, i)
+}
+
+func main() {
+	wg := sync.WaitGroup{}
+	lock := sync.Mutex{}
+
+	arr := make([]int, 0)
+	for i := 0; i < 10000; i++ {
+		wg.Add(1)
+		go task(&arr, i, &wg, &lock)
+	}
+	wg.Wait()
+
+	fmt.Println(len(arr))
+}
+```
+
+在main函数中，会并发的创建10000个`task`任务；
+
+在每个`task`任务中，会向arr数组的末尾添加一个 i 值；
+
+>   <font color="#f00">**注：Golang中内置的`append`函数是非线程安全的！**</font>
+
+同时，当 i 为500时，代码模拟了业务panic的场景；
+
+并且，为了防止单个 task 的 panic 影响到其他任务，我们在每一个 task 任务的开头都声明了defer函数，在其中使用`recover`对panic进行了拦截；
+
+执行代码后输出：
+
+```
+[panic] err: test panic
+stack: goroutine 507 [running]:
+main.getCurrentGoroutineStack(...)
+	D:/workspace/Go_Learn/app.go:20
+main.task.func1(0xc000010090)
+	D:/workspace/Go_Learn/app.go:27 +0xc5
+panic(0x963180, 0x99cfa0)
+	E:/golang/src/runtime/panic.go:969 +0x176
+main.callPanic(...)
+	D:/workspace/Go_Learn/app.go:14
+main.task(0xc000004480, 0x1f4, 0xc000010090, 0xc0000100a0)
+	D:/workspace/Go_Learn/app.go:33 +0x197
+created by main.main
+	D:/workspace/Go_Learn/app.go:48 +0x10f
+
+9999
+```
+
+可以看到单个 task 的 panic 并不会影响到其他 task：对于添加10000个数的任务，单个任务panic后，其他的9999个任务仍然正常的执行了！
+
+同时，我们可以很容易的定位到，Panic 来源于 `D:/workspace/Go_Learn/app.go:14`，即代码的第14行！
+
+<br/>
+
+## **总结**
+
+对于并发的情况，对于 task 的抽象是非常重要的；
+
+同时，对于每一个单独的并发 task，都推荐采用下面的代码来对 panic 进行拦截，防止一个 task 的 panic 影响到其他所有的 task；
+
+并且，为每一个 task 在 panic 时打印出堆栈来直接定位问题，并保证 WaitGroup 能够正常退出；
+
+```go
+defer func() {
+    if err := recover(); err != nil {
+        fmt.Printf("[panic] err: %v\nstack: %s\n", err, getCurrentGoroutineStack())
+    }
+    wg.Done()
+}()
+```
+
+<br/>
+
+# **附录**
+
+源代码：
+
+-   https://github.com/JasonkayZK/Go_Learn/tree/add-panic-log
+
+<br/>
