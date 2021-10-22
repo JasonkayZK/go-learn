@@ -33,5 +33,6 @@
 | [receiver](https://github.com/JasonkayZK/Go_Learn/tree/receiver) | 2021-06-28   | 深入探讨了Go中方法实现的值接收器和引用接收器以及他们和Interface的联系；<br />文章[《一文看懂Go方法中的值接收器和引用接收器》](https://jasonkayzk.github.io/2021/06/28/一文看懂Go方法中的值接收器和引用接收器/)源码 |
 | [go-v1.17-rc-generic](https://github.com/JasonkayZK/Go_Learn/tree/go-v1.17-rc-generic) | 2021-07-19   | 在Docker中体验Golang的泛型<br />文章[《在Docker中体验Go1-17中的泛型》](https://jasonkayzk.github.io/2021/07/05/在Docker中体验Go1-17中的泛型/)源码 |
 | [add-panic-log](https://github.com/JasonkayZK/Go_Learn/tree/add-panic-log) | 2021-09-26   | 为Panic后的Goroutine获取堆栈信息<br />文章[《在Golang发生Panic后打印出堆栈信息》](https://jasonkayzk.github.io/2021/09/26/%E5%9C%A8Golang%E5%8F%91%E7%94%9FPanic%E5%90%8E%E6%89%93%E5%8D%B0%E5%87%BA%E5%A0%86%E6%A0%88%E4%BF%A1%E6%81%AF/)源码 |
+| [goroutine-limit](https://github.com/JasonkayZK/Go_Learn/tree/goroutine-limit) | 2021-10-22   | 记录一些多个异步任务限制开启Goroutine数量的方法<br />文章[《控制Goroutine数量的方法》](https://jasonkayzk.github.io/2021/10/22/控制Goroutine数量的方法/)源码 |
 |                                                              |              |                                                              |
 |                                                              |              |                                                              |
