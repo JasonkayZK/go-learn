@@ -55,6 +55,7 @@ func main() {
 		fmt.Printf("index: %d, goroutine Num: %d \n", idx, runtime.NumGoroutine())
 	}
 	wg.Wait()
+	close(jobChan)
 	fmt.Printf("end job, goroutine Num: %d, cost time: %dms\n", runtime.NumGoroutine(), time.Now().UnixNano()/1000-startTime)
 
 	// Test
