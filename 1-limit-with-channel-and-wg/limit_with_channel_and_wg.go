@@ -35,6 +35,7 @@ func main() {
 
 	wg := sync.WaitGroup{}
 	jobChan := make(chan *jobReqItem, poolSize)
+	defer close(jobChan)
 	res := make([]string, len(arr))
 
 	fmt.Printf("start job, pool size: %d\n", poolSize)
@@ -52,10 +53,16 @@ func main() {
 	for idx, s := range arr {
 		wg.Add(1)
 		jobChan <- &jobReqItem{Str: s, JobIdx: idx, Res: &res, Wg: &wg}
-		fmt.Printf("index: %d, goroutine Num: %d \n", idx, runtime.NumGoroutine())
+
+		// Goroutine Number Check：
+		// +1：包括了main函数的Goroutine
+		fmt.Printf("index: %d, goroutine Num: %d\n", idx, runtime.NumGoroutine())
+		if runtime.NumGoroutine() > poolSize+1 {
+			panic("超过了指定Goroutine池大小！")
+		}
 	}
 	wg.Wait()
-	close(jobChan)
+
 	fmt.Printf("end job, goroutine Num: %d, cost time: %dms\n", runtime.NumGoroutine(), time.Now().UnixNano()/1000-startTime)
 
 	// Test
