@@ -13,7 +13,7 @@ const (
 )
 
 var (
-	jobNum = 10000
+	jobNum = 100000
 
 	// Fatal Err!
 	//jobNum = 1000000000
@@ -47,7 +47,7 @@ func job(str string, jobIdx int, res *[]string, wg *sync.WaitGroup) {
 	fmt.Printf("str: %s, jobIdx: %d\n", str, jobIdx)
 	(*res)[jobIdx] = prefix + str
 
-	time.Sleep(time.Millisecond * 500) // 睡眠500ms，模拟耗时
+	time.Sleep(time.Second * 5) // 睡眠5s，模拟耗时
 }
 
 // 初始化测试数据

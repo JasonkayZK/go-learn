@@ -16,9 +16,6 @@ const (
 var (
 	jobNum = 1000000
 
-	// Fatal Err!
-	//jobNum = 1000000000
-
 	poolSize = runtime.NumCPU() // 同时运行的goroutine上限
 )
 
