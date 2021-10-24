@@ -12,16 +12,15 @@ const (
 )
 
 var (
-	jobNum = 1000000
-
-	// Fatal Err!
-	//jobNum = 1000000000
+	jobNum = 100000000
 
 	poolSize = runtime.NumCPU()
 )
 
 func main() {
-	antsSubmit()
+	//antsSubmit()
+
+	antsWithFunc()
 }
 
 // 任务内容
@@ -30,6 +29,7 @@ func job(str string, jobIdx int, res *[]string, wg *sync.WaitGroup) {
 
 	fmt.Printf("str: %s, jobIdx: %d\n", str, jobIdx)
 	(*res)[jobIdx] = prefix + str
+	//fmt.Printf("res: %v\n", *res)
 
 	//time.Sleep(time.Millisecond * 500) // 睡眠500ms，模拟耗时
 

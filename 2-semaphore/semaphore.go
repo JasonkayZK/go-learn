@@ -51,7 +51,7 @@ func main() {
 	// Result Test
 	for idx, re := range res {
 		if re != prefix+arr[idx] {
-			panic(fmt.Sprintf("not equal: re: %s, arr[idx]: %s", re, arr[idx]))
+			panic(fmt.Sprintf("not equal: re: %s, arr[%d]: %s", re, idx, arr[idx]))
 		}
 	}
 }
