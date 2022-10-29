@@ -1,6 +1,8 @@
 # **Go Memory Model**
 
+Reference:
 
+- https://go.dev/ref/mem#finalizer
 
 Linked Blog:
 
